@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,22 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: const Text('Home Page'),
+      body: Container(
+        height: 150,
+        // decoration:decor,
+        decoration: const BoxDecoration(color: Colors.transparent),
+        child: Swiper(
+          itemBuilder: (BuildContext context, int index) {
+            return Image.network(
+              "http://via.placeholder.com/350x150",
+              fit: BoxFit.fill,
+            );
+          },
+          itemCount: 3,
+          pagination: const SwiperPagination(),
+          // control: const SwiperControl(),
+        ),
+      ),
     );
   }
 }
