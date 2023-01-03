@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 import 'pages/device_page.dart';
 import 'pages/automation_page.dart';
@@ -48,12 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(children: [
         const MyStatelessWidget(),
         const MyStatefulWidget(),
-        Lottie.asset('assets/lottie/device.json',
-            width: 40, height: 40, repeat: true),
-        Lottie.asset('assets/lottie/shop.json',
-            width: 40, height: 40, repeat: true),
-        Lottie.network(
-            'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
         TextButton(
             onPressed: () => onPressed(const DevicePage()),
             child: const Text('Home')),

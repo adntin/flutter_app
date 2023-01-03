@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Test</title>
+    <script>
+      window.onload = function () {
+        document.getElementById("btn1").onclick = function () {
+          Toaster.postMessage("这是一个 Toaster 示例");
+        };
+      };
+      window.onload = function () {
+        document.getElementById("btn2").onclick = function () {
+          OpenWebViewPage.postMessage("https://community.arnoo.com?code=123");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Hello world 333!</h1>
+    <a href="./pairing.html">添加设备</a>
+    <a href="./community.html">论坛</a>
+    <button id="btn">Flutter Toaster</button>
+    <button id="btn">打开 WebView</button>
+    <script src="./main.js"></script>
+  </body>
+</html>

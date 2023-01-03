@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community</title>
+    <script>
+      window.onload = function () {
+        // 纯原生页面: `OpenNativePage`
+        document.getElementById("btn1").onclick = function () {
+          OpenFlutterPage.postMessage("/Moment/Publish");
+        };
+        document.getElementById("btn2").onclick = function () {
+          OpenFlutterPage.postMessage("/Forum/Publish");
+        };
+        document.getElementById("btn3").onclick = function () {
+          OpenFlutterPage.postMessage("/Moment/Reply");
+        };
+        document.getElementById("btn4").onclick = function () {
+          OpenFlutterPage.postMessage("/Forum/Reply");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="btn1">发布 Moment</button>
+    <button id="btn2">发布 Forum</button>
+    <button id="btn3">回复 Moment</button>
+    <button id="btn4">回复 Forum</button>
+  </body>
+</html>
